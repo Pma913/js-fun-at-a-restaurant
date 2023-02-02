@@ -12,7 +12,10 @@ function createMenuItem(item) {
 }
 
 function addIngredients(topping, ingredients) {
-  ingredients.push(topping);
+  if (ingredients.includes(topping)) {
+  } else {
+    ingredients.push(topping);
+  }
 }
 
 module.exports = {
