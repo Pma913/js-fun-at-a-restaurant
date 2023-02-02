@@ -2,11 +2,11 @@ function nameMenuItem(food) {
   return `Delicious ${food}`;
 }
 
-function createMenuItem(item) {
+function createMenuItem(menuItemName, price, type) {
   var newItem = {
-    name: item,
-    price: 10.99,
-    type: "breakfast"
+    name: menuItemName,
+    price: price,
+    type: type
   }
   return newItem
 }
@@ -18,11 +18,15 @@ function addIngredients(topping, ingredients) {
   }
 }
 
+function formatPrice(price) {
+  return `$${price}`;
+} 
+
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
-  // formatPrice,
+  formatPrice,
   // decreasePrice,
   // createRecipe
 }
