@@ -22,12 +22,19 @@ function formatPrice(price) {
   return `$${price}`;
 } 
 
+function decreasePrice(value) {
+// multiply the original value by 0.1
+// take the new value and subtract it from original value
+decreasedPrice = value - (value * 0.1);
+return decreasedPrice;
+}
+
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
   formatPrice,
-  // decreasePrice,
+  decreasePrice,
   // createRecipe
 }
 
