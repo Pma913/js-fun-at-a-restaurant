@@ -29,13 +29,22 @@ decreasedPrice = value - (value * 0.1);
 return decreasedPrice;
 }
 
+function createRecipe(title, ingredients, menuItemType) {
+  var newRecipe = {
+    title: title,
+    ingredients: ingredients,
+    type: menuItemType
+  }
+  return newRecipe;
+}
+
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
   formatPrice,
   decreasePrice,
-  // createRecipe
+  createRecipe
 }
 
 
