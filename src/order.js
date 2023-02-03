@@ -21,9 +21,27 @@ function refundOrder(orderNumber, deliveryOrders) {
   }
 }
 
+function listItems(deliveryOrders) {
+  // run array of orders through a loop
+  // print to the console the (index).item for each order(element)
+  var itemName = '';
+  for (var i = 0; i < deliveryOrders.length; i++) {
+    itemName += `${deliveryOrders[i].item}, `;
+  }
+  return itemName.substring(0, itemName.length - 2);
+}
+
+function searchOrder(deliveryOrders, food) {
+  var orderItems = []
+  for (var i = 0; i < deliveryOrders.length; i++) {
+   orderItems.push(deliveryOrders[i].item);
+  }
+  return orderItems.includes(food);  
+}
+
 module.exports = {
   takeOrder,
   refundOrder,
-  // listItems,
-  // searchOrder
+  listItems,
+  searchOrder
 }
