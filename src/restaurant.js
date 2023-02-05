@@ -23,7 +23,6 @@ function addMenuItem(restaurant, menuItem) {
     restaurant.menus.lunch.push(menuItem);
   } else if (menuItem.type === "dinner" && !restaurant.menus.dinner.includes(menuItem)) {
     restaurant.menus.dinner.push(menuItem);
-  // } else {
   }
 }
 // remove menue item based on 3 parameters (restaurant, item.name, item.type)
